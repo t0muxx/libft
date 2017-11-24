@@ -6,12 +6,11 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 17:18:58 by tmaraval          #+#    #+#             */
-/*   Updated: 2017/11/20 08:09:02 by tmaraval         ###   ########.fr       */
+/*   Updated: 2017/11/24 16:13:42 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
