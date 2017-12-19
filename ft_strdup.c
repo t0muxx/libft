@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:10:40 by tmaraval          #+#    #+#             */
-/*   Updated: 2017/11/20 08:10:59 by tmaraval         ###   ########.fr       */
+/*   Updated: 2017/12/19 12:02:55 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strdup(const char *s1)
 		len++;
 	if ((newchaine = (char *)malloc(sizeof(char) * len + 1)) == NULL)
 		return (NULL);
-	while (i <= len)
+	while (i < len)
 	{
 		newchaine[i] = s1[i];
 		i++;

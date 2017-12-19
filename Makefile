@@ -6,7 +6,7 @@
 #    By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 11:35:52 by tmaraval          #+#    #+#              #
-#    Updated: 2017/12/02 09:49:17 by tmaraval         ###   ########.fr        #
+#    Updated: 2017/12/15 08:02:57 by tmaraval         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ $(NAME): $(OBJ)
 	ranlib $(NAME)
 
 ./%.o: %.c
-	gcc -Wall -Wextra -Werror -c $< -o $@
+	gcc -Wall -Wextra -Werror -g -c $< -o $@
 
 clean:
 	/bin/rm -f $(OBJ)
