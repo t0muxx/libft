@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 10:36:27 by tmaraval          #+#    #+#             */
-/*   Updated: 2018/01/05 10:46:55 by tmaraval         ###   ########.fr       */
+/*   Updated: 2018/01/05 11:13:10 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,11 @@
 # define ANSI_COLOR_YELLOW  "\x1b[33m"
 # define ANSI_COLOR_BLUE    "\x1b[34m"
 # define ANSI_COLOR_MAGENTA "\x1b[35m"
+# define ANSI_COLOR_PURPLE  "\x1b[0;35m"
 # define ANSI_COLOR_CYAN    "\x1b[36m"
 # define ANSI_COLOR_RESET   "\x1b[0m"
+# define ANSI_COLOR_BLUE_ON_YELLOW  "\x1b[34;43m"
+# define ANSI_COLOR_BLUE_ON_CYAN	"\x1b[34;106m"
 
 void				ft_putstr_color(char *str, char *color);
 
