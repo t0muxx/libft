@@ -6,7 +6,7 @@
 /*   By: tomlulu <tomlulu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/07 16:38:31 by tomlulu           #+#    #+#             */
-/*   Updated: 2018/01/07 17:35:25 by tomlulu          ###   ########.fr       */
+/*   Updated: 2018/01/07 17:38:49 by tomlulu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,12 @@ char	*ft_itoa_base(int nb, int base)
 	i = 1;
 	if (sign == 1 && base == 10)
 		nb = nb * -1;
+	if (nb == 0)
+	{
+		ret = ft_memalloc(2);
+		ret[0] = '0';
+		return (ret);
+	}
 	cnt = ft_cnt_digit(nb, base);
 	ft_strcpy(basestr, "0123456789ABCDEF");
 	if (!(ret = (char *)malloc(sizeof(char) * (cnt + sign + 1))))
