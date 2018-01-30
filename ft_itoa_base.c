@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 08:14:11 by tmaraval          #+#    #+#             */
-/*   Updated: 2018/01/08 08:19:05 by tmaraval         ###   ########.fr       */
+/*   Updated: 2018/01/11 10:17:17 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ char	*ft_itoa_cpy(int nb, int base, int sign)
 	int		i;
 	char	*ret;
 	char	basestr[17];
+	int		cnt;
 
 	i = 1;
 	cnt = ft_cnt_digit(nb, base);
@@ -51,7 +52,6 @@ char	*ft_itoa_cpy(int nb, int base, int sign)
 char	*ft_itoa_base(int nb, int base)
 {
 	int		sign;
-	int		cnt;
 	char	*ret;
 
 	sign = (nb < 0);
