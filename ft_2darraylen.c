@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_isalnum.c                                   :+:      :+:    :+:   */
+/*   ft_2darraylen.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tomlulu <tomlulu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/30 18:12:07 by tomlulu           #+#    #+#             */
-/*   Updated: 2018/01/30 18:23:57 by tomlulu          ###   ########.fr       */
+/*   Created: 2018/02/02 09:58:02 by tmaraval          #+#    #+#             */
+/*   Updated: 2018/02/02 09:58:59 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_str_isalnum(const char *s)
+size_t		ft_2darraylen(char **tab)
 {
-	char *str;
+	size_t i;
 
-	str = (char *)s;
-	while (*str)
-	{
-		if (ft_isalnum(*str) == 0)
-			return (0);
-		str++;
-	}
-	return (1);
+	i = 0;
+	while (tab[i])
+		i++;
+	return (i);
 }
