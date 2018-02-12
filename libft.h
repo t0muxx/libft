@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 10:36:27 by tmaraval          #+#    #+#             */
-/*   Updated: 2018/02/02 10:00:54 by tmaraval         ###   ########.fr       */
+/*   Updated: 2018/02/12 11:17:19 by tomlulu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -171,4 +171,5 @@ char				*ft_strrev(char *str);
 char				*ft_itoa_base(int nb, int base);
 
 size_t				ft_2darraylen(char **tab);
+
 #endif
