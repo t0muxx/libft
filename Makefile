@@ -6,7 +6,7 @@
 #    By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 11:35:52 by tmaraval          #+#    #+#              #
-#    Updated: 2018/02/13 08:42:53 by tmaraval         ###   ########.fr        #
+#    Updated: 2018/02/13 19:19:13 by tomlulu          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c f
 	ft_2darraylen.c \
 	ft_split_whitespace.c \
 	ft_lst_append.c \
-	ft_lst_free.c
+	ft_lst_free.c \
+	ft_date.c
 
 OBJ= $(SRC:.c=.o)
 
