@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 10:36:27 by tmaraval          #+#    #+#             */
-/*   Updated: 2018/02/12 11:17:19 by tomlulu          ###   ########.fr       */
+/*   Updated: 2018/02/13 08:38:12 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 # define ANSI_COLOR_RESET   "\x1b[0m"
 # define ANSI_COLOR_BLUE_ON_YELLOW  "\x1b[34;43m"
 # define ANSI_COLOR_BLUE_ON_CYAN	"\x1b[34;106m"
+# define SEPARATOR_WHITESPACE		" \t\f"
 
 void				ft_putstr_color(char *str, char *color);
 
@@ -152,6 +153,8 @@ void				ft_lstadd(t_list **alst, t_list *new);
 
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 
+void				ft_lst_append(t_list **head, t_list *new);
+
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 void				ft_strrpl(char *s, char f, char r);
@@ -172,4 +175,7 @@ char				*ft_itoa_base(int nb, int base);
 
 size_t				ft_2darraylen(char **tab);
 
+char				**ft_split_whitespace(const char *str);
+
+void				ft_lst_free(t_list *list);
 #endif

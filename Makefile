@@ -6,7 +6,7 @@
 #    By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 11:35:52 by tmaraval          #+#    #+#              #
-#    Updated: 2018/02/02 09:59:11 by tmaraval         ###   ########.fr        #
+#    Updated: 2018/02/13 08:42:53 by tmaraval         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,10 @@ SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c f
 	ft_strrev.c \
 	ft_itoa_base.c \
 	ft_str_isalnum.c \
-	ft_2darraylen.c
+	ft_2darraylen.c \
+	ft_split_whitespace.c \
+	ft_lst_append.c \
+	ft_lst_free.c
 
 OBJ= $(SRC:.c=.o)
 
