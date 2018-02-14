@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 10:36:27 by tmaraval          #+#    #+#             */
-/*   Updated: 2018/02/14 08:11:34 by tmaraval         ###   ########.fr       */
+/*   Updated: 2018/02/14 11:20:40 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <time.h>
+# include "ft_printf/ft_printf.h"
 
 # define ANSI_COLOR_RED     "\x1b[31m"
 # define ANSI_COLOR_GREEN   "\x1b[32m"
@@ -120,4 +121,8 @@ size_t				ft_2darraylen(char **tab);
 char				**ft_split_whitespace(const char *str);
 void				ft_lst_free(t_list *list);
 void				ft_date(t_ft_date *date);
+wchar_t				*ft_wcstrjoin(wchar_t const *s1, wchar_t const *s2);
+size_t				ft_wcstrlen(const wchar_t *s);
+wchar_t				*ft_wcstrsub(wchar_t const *s, unsigned int start,
+																size_t len);
 #endif
