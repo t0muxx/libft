@@ -6,7 +6,7 @@
 #    By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 11:35:52 by tmaraval          #+#    #+#              #
-#    Updated: 2018/02/14 11:16:44 by tmaraval         ###   ########.fr        #
+#    Updated: 2018/02/14 11:41:33 by tmaraval         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -95,7 +95,6 @@ SRC = ft_memset.c \
 	ft_printf/conv/ft_sitoa_base.c \
 	ft_printf/conv/ft_ulltoa_base.c	\
 	ft_printf/ft_printf.c \
-	ft_printf/ft_printf.h \
 	ft_printf/ft_printf_cwidth.c \
 	ft_printf/ft_printf_flag_utils.c \
 	ft_printf/ft_printf_num_flag.c \

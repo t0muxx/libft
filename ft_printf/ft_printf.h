@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/09 13:34:47 by tmaraval          #+#    #+#             */
-/*   Updated: 2018/02/14 11:28:35 by tmaraval         ###   ########.fr       */
+/*   Updated: 2018/02/14 11:42:00 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <limits.h>
-# include "../libft.h"
+
 # include <stdlib.h>
 # include <stdio.h>
 # include <wchar.h>
