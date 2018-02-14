@@ -6,7 +6,7 @@
 /*   By: tomlulu <tomlulu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/13 19:07:48 by tomlulu           #+#    #+#             */
-/*   Updated: 2018/02/13 19:19:18 by tomlulu          ###   ########.fr       */
+/*   Updated: 2018/02/14 08:11:05 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ t_ft_date		ft_conv_date(const char *str)
 	return (date);
 }
 
-void	ft_date(t_ft_date *date)
+void			ft_date(t_ft_date *date)
 {
 	time_t ft_time;
 

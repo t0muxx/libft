@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 10:36:27 by tmaraval          #+#    #+#             */
-/*   Updated: 2018/02/13 19:19:04 by tomlulu          ###   ########.fr       */
+/*   Updated: 2018/02/14 08:11:34 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,14 @@
 # define ANSI_COLOR_BLUE_ON_CYAN	"\x1b[34;106m"
 # define SEPARATOR_WHITESPACE		" \t\f"
 
-typedef struct	s_ft_date
+typedef struct		s_ft_date
 {
 	char day[4];
 	char month[4];
 	char daynbr[3];
 	char hour[6];
 	char year[6];
-}				t_ft_date;
-
+}					t_ft_date;
 
 void				ft_putstr_color(char *str, char *color);
 void				*ft_memset(void *b, int c, size_t len);
