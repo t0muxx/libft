@@ -6,7 +6,7 @@
 #    By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 11:35:52 by tmaraval          #+#    #+#              #
-#    Updated: 2018/02/14 11:41:33 by tmaraval         ###   ########.fr        #
+#    Updated: 2018/02/15 08:23:16 by tmaraval         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -108,14 +108,15 @@ SRC = ft_memset.c \
 
 OBJ= $(SRC:.c=.o)
 
-all: $(NAME)
+all: printmess $(NAME)
 
 $(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
+	@echo "\033[92mLibft.a created\033[0m"
 
 ./%.o: %.c
-	gcc -Wall -Wextra -Werror -c $< -o $@
+	@gcc -Wall -Wextra -Werror -c $< -o $@
 
 clean:
 	/bin/rm -f $(OBJ)
@@ -124,5 +125,8 @@ fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all
+
+printmess:
+	@echo "\033[92mCompiling Libft...\033[0m"
 
 .PHONY: all clean fclean re
