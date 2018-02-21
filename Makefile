@@ -6,7 +6,7 @@
 #    By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 11:35:52 by tmaraval          #+#    #+#              #
-#    Updated: 2018/02/15 08:28:34 by tmaraval         ###   ########.fr        #
+#    Updated: 2018/02/21 10:25:52 by tmaraval         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -105,6 +105,7 @@ SRC = ft_memset.c \
 	ft_printf/ft_printf_utils.c \
 	ft_printf/ft_printf_width.c \
 	ft_printf/ft_printf_width_utils.c \
+	gnl/get_next_line.h
 
 OBJ= $(SRC:.c=.o)
 
