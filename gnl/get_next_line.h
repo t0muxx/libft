@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 08:40:43 by tmaraval          #+#    #+#             */
-/*   Updated: 2017/12/05 15:35:32 by tmaraval         ###   ########.fr       */
+/*   Updated: 2018/02/21 10:30:38 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_H
 # define BUFF_SIZE  5
 
-# include "libft/includes/libft.h"
+# include "../libft.h"
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
