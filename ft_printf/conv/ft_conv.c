@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/11 10:29:20 by tmaraval          #+#    #+#             */
-/*   Updated: 2018/02/14 11:30:57 by tmaraval         ###   ########.fr       */
+/*   Updated: 2018/02/22 18:59:17 by tomlulu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,10 +80,8 @@ int		ft_conv_do_noconvert(t_parsed_opt *opt, char **format)
 
 int		ft_conv(t_parsed_opt *opt, va_list curr_arg, char **format)
 {
-	int i;
 	int ret;
 
-	i = 0;
 	ret = 0;
 	if (opt->ch_convert == -1)
 		ret = ft_conv_do_noconvert(opt, format);

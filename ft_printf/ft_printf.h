@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/09 13:34:47 by tmaraval          #+#    #+#             */
-/*   Updated: 2018/02/14 11:43:18 by tmaraval         ###   ########.fr       */
+/*   Updated: 2018/02/22 19:39:20 by tomlulu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@
 
 # define TRUE 1
 # define FALSE 0
+
+# ifdef __linux__
+# include <inttypes.h>
+# endif
 
 # define INTMAX_T intmax_t
 # define UINTMAX_T uintmax_t
