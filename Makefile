@@ -6,7 +6,7 @@
 #    By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 11:35:52 by tmaraval          #+#    #+#              #
-#    Updated: 2018/02/21 10:29:59 by tmaraval         ###   ########.fr        #
+#    Updated: 2018/06/04 14:04:25 by tmaraval         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -112,12 +112,12 @@ OBJ= $(SRC:.c=.o)
 all: printmess $(NAME)
 
 $(NAME): $(OBJ)
+	@gcc -Wall -Wextra -Werror -c $(SRC)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@echo "\033[92mLibft.a created\033[0m"
 
-./%.o: %.c
-	@gcc -Wall -Wextra -Werror -c $< -o $@
+#./%.o: %.c
 
 clean:
 	@/bin/rm -f $(OBJ)
