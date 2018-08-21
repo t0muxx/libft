@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/16 15:59:46 by tmaraval          #+#    #+#             */
-/*   Updated: 2018/01/23 10:34:33 by tmaraval         ###   ########.fr       */
+/*   Updated: 2018/08/21 15:59:52 by tomux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ft_conv_str_dowchar_wstr(wchar_t ch, char *wstr)
 		wstr[3] = 0x80 | (ch & 0x3F);
 	}
 	else
-		;
+		NULL;
 }
 
 void	ft_conv_str_dowchar(t_parsed_opt *opt, char *wstr)
@@ -65,13 +65,11 @@ void	ft_conv_str_dowchar(t_parsed_opt *opt, char *wstr)
 void	ft_conv_str(t_parsed_opt *opt, va_list curr_arg)
 {
 	char *wstr;
-	char *temp;
 
 	if (opt->bin_lenmod & LENMOD_L || opt->ch_convert == 'S')
 	{
 		opt->str_arg = ft_memalloc(5);
 		ft_bzero(opt->str_arg, 5);
-		temp = opt->str_arg;
 		wstr = ft_memalloc(5);
 		opt->wstr_arg = (wchar_t *)va_arg(curr_arg, wchar_t *);
 		ft_conv_str_dowchar(opt, wstr);
