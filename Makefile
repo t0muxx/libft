@@ -6,7 +6,7 @@
 #    By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 11:35:52 by tmaraval          #+#    #+#              #
-#    Updated: 2018/02/21 10:29:59 by tmaraval         ###   ########.fr        #
+#    Updated: 2018/09/07 09:05:49 by tmaraval         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,8 +65,10 @@ SRC = ft_memset.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
 	ft_lstnew.c \
+	ft_lstnew2.c \
 	ft_lstdelone.c \
 	ft_lstdel.c \
+	ft_lstsortedinsert.c \
 	ft_lstadd.c \
 	ft_lstiter.c \
 	ft_lstmap.c \
