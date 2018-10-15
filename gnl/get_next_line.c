@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/25 09:57:42 by tmaraval          #+#    #+#             */
-/*   Updated: 2018/09/17 13:54:26 by tmaraval         ###   ########.fr       */
+/*   Updated: 2018/10/15 10:20:10 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int		ft_do_last(char **strr, char **line, int *i)
 			{
 				*line = ft_strsub(*strr, 0, j);
 				temp = *strr;
-				*strr = ft_strsub(*strr, j + 1, ft_strlen(*strr));
+				*strr = ft_strsub(*strr, j + 1, ft_strlen(*strr) - (j + 1));
 				ft_strdel(&temp);
 				return (1);
 			}
@@ -61,7 +61,7 @@ int		ft_gnl_do_lines(char **strr, char **line, int *i)
 		{
 			*line = ft_strsub(*strr, 0, j);
 			temp = *strr;
-			*strr = ft_strsub(*strr, j + 1, ft_strlen(*strr));
+			*strr = ft_strsub(*strr, j + 1, ft_strlen(*strr) - (j + 1));
 			ft_strdel(&temp);
 			return (1);
 		}
