@@ -6,7 +6,7 @@
 /*   By: tmaraval <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/07 09:02:30 by tmaraval          #+#    #+#             */
-/*   Updated: 2018/09/07 09:05:13 by tmaraval         ###   ########.fr       */
+/*   Updated: 2018/10/15 10:19:06 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_lst_sortedinsert(t_list **last, t_list *new_node)
 	else
 	{
 		current = *last;
-		while (current->next != NULL && 
+		while (current->next != NULL &&
 		ft_strcmp(current->next->content, new_node->content) < 0)
 		{
 			current = current->next;

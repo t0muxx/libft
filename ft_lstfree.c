@@ -6,13 +6,13 @@
 /*   By: tmaraval <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 08:52:22 by tmaraval          #+#    #+#             */
-/*   Updated: 2018/09/10 08:54:32 by tmaraval         ###   ########.fr       */
+/*   Updated: 2018/10/15 10:18:50 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstfree(t_list *head)
+void	ft_lstfree(t_list *head)
 {
 	t_list *temp;
 
