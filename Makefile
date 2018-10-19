@@ -6,11 +6,13 @@
 #    By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 11:35:52 by tmaraval          #+#    #+#              #
-#    Updated: 2018/09/07 09:07:35 by tmaraval         ###   ########.fr        #
+#    Updated: 2018/10/19 11:51:44 by tmaraval         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+
+OBJ_PATH =  obj
 
 SRC = ft_memset.c \
  	ft_bzero.c \
@@ -109,20 +111,21 @@ SRC = ft_memset.c \
 	ft_printf/ft_printf_width_utils.c \
 	gnl/get_next_line.c
 
-OBJ= $(SRC:.c=.o)
+OBJ = $(SRC:%.c=$(OBJ_PATH)/%.o)
 
 all: printmess $(NAME)
 
 $(NAME): $(OBJ)
-	@gcc -Wall -Werror -Wextra -c $(SRC)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@echo "\033[92mLibft.a created\033[0m"
 
-#./%.o: %.c
+$(OBJ): $(OBJ_PATH)/%.o : %.c
+	@mkdir -p $(dir $@)
+	@gcc -o $@ -Wall -Wextra -Werror -c $<
 
 clean:
-	@/bin/rm -f $(OBJ)
+	@/bin/rm -rf $(OBJ)
 	@echo "\033[92mLibft object file cleaned\033[0m"
 
 fclean: clean
