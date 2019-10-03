@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 18:35:32 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/10/02 18:36:50 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/10/03 08:32:24 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,12 @@ void ft_putptr(void *ptr)
 {
 	char buffer[64];
 
-	ft_putstr("0x");
-	ft_ltoa_base((long)ptr, buffer, 16);
-	ft_putendl(buffer);
+	if (ptr == 0)
+		ft_putstr("nil");
+	else
+	{
+		ft_ltoa_base((long)ptr, buffer, 16);
+		ft_putstr("0x");
+		ft_putstr(buffer);
+	}
 }
