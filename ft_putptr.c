@@ -6,13 +6,13 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 18:35:32 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/10/03 08:32:24 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/10/03 12:49:52 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putptr(void *ptr)
+void	ft_putptr(void *ptr)
 {
 	char buffer[64];
 

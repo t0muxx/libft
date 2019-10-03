@@ -6,13 +6,13 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 18:07:31 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/10/02 18:30:55 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/10/03 12:51:43 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int  ft_ltoa_cnt_digit(long nb, int base)
+int		ft_ltoa_cnt_digit(long nb, int base)
 {
 	int cnt;
 
@@ -25,11 +25,11 @@ int  ft_ltoa_cnt_digit(long nb, int base)
 	return (cnt);
 }
 
-void ft_ltoa_base_do(long nb, char *buffer, int base, int sign)
+void	ft_ltoa_base_do(long nb, char *buffer, int base, int sign)
 {
-	int i;
-	char charset[17];
-	int cnt;
+	int		i;
+	char	charset[17];
+	int		cnt;
 
 	cnt = ft_ltoa_cnt_digit(nb, base);
 	i = 1;
@@ -39,13 +39,13 @@ void ft_ltoa_base_do(long nb, char *buffer, int base, int sign)
 		buffer[cnt + sign - i] = charset[nb % base];
 		nb /= base;
 		i++;
-	}	
+	}
 	if (sign && base == 10)
 		buffer[0] = '-';
 	buffer[cnt + sign] = '\0';
 }
 
-void ft_ltoa_base(long nb, char *buffer, int base)
+void	ft_ltoa_base(long nb, char *buffer, int base)
 {
 	int sign;
 
