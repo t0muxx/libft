@@ -6,7 +6,7 @@
 #    By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 11:35:52 by tmaraval          #+#    #+#              #
-#    Updated: 2019/10/02 18:37:57 by tmaraval         ###   ########.fr        #
+#    Updated: 2019/10/03 21:26:13 by tmaraval         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -115,27 +115,21 @@ SRC = ft_memset.c \
 
 OBJ = $(SRC:%.c=$(OBJ_PATH)/%.o)
 
-all: printmess $(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJ)
-	@ar rc $(NAME) $(OBJ)
-	@ranlib $(NAME)
-	@echo "\033[92mLibft.a created\033[0m"
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 $(OBJ): $(OBJ_PATH)/%.o : %.c
-	@mkdir -p $(dir $@)
-	@gcc -o $@ -Wall -Wextra -Werror -c $<
+	gcc -o $@ -Wall -Wextra -Werror -c $<
 
 clean:
-	@/bin/rm -rf $(OBJ)
-	@echo "\033[92mLibft object file cleaned\033[0m"
+	/bin/rm -rf $(OBJ)
 
 fclean: clean
-	@/bin/rm -f $(NAME)
+	/bin/rm -f $(NAME)
 
 re: fclean all
-
-printmess:
-	@echo "\033[92mCompiling Libft...\033[0m"
 
 .PHONY: all clean fclean re
