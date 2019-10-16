@@ -6,31 +6,33 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 08:38:49 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/10/16 11:52:42 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/10/16 12:21:40 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	fill_sixteen_bytes(void *mem, char *sixteen_bytes, size_t size)
+void	fill_sixteen_bytes(void *mem, unsigned char *sixteen_bytes, size_t size)
 {
 	int i;
-	char *mem_c;
+	unsigned char *mem_c;
 
 	i = 0;
 	while (i < (int)size)
 	{
-		mem_c = (char *)mem;	
+		mem_c = (unsigned char *)mem;	
 		sixteen_bytes[i] = *mem_c;
+		i++;
 		mem++;
-		i++;	
 	}
 }
 
-void	print_bytes(char *sixteen_bytes, size_t size)
+void	print_bytes(unsigned char *sixteen_bytes, size_t size)
 {
 	int i;
 	int j;
+	int nb;
+	char *base = "0123456789abcdef";
 
 	i = 0;
 	j = 0;
@@ -39,9 +41,10 @@ void	print_bytes(char *sixteen_bytes, size_t size)
 		j = 0;
 		while (j < 2)
 		{
-			if (sixteen_bytes[i] < 10)
-				ft_putchar('0');
-			ft_putnbr(sixteen_bytes[i]);
+			nb = sixteen_bytes[i] / 16;
+			ft_putchar(base[nb]);
+			nb = sixteen_bytes[i] % 16;
+			ft_putchar(base[nb]);
 			i++;
 			j++;
 		}
@@ -49,7 +52,7 @@ void	print_bytes(char *sixteen_bytes, size_t size)
 	}
 }
 
-void	print_bytes_char(char *sixteen_bytes, size_t size)
+void	print_bytes_char(unsigned char *sixteen_bytes, size_t size)
 {
 	int i;
 
@@ -79,7 +82,7 @@ void	pad_space(size_t read)
 
 void	ft_print_mem(void *mem, size_t size)
 {
-	char	sixteen_bytes[16];
+	unsigned char	sixteen_bytes[16];
 	size_t	read;
 	void	*stop;
 
