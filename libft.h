@@ -6,7 +6,7 @@
 /*   By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 10:36:27 by tmaraval          #+#    #+#             */
-/*   Updated: 2019/10/03 08:24:50 by tmaraval         ###   ########.fr       */
+/*   Updated: 2019/10/16 11:33:50 by tmaraval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+void				ft_print_mem(void *mem, size_t size);
 
 typedef struct		s_list
 {

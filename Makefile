@@ -6,7 +6,7 @@
 #    By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 11:35:52 by tmaraval          #+#    #+#              #
-#    Updated: 2019/10/03 21:26:13 by tmaraval         ###   ########.fr        #
+#    Updated: 2019/10/16 09:10:52 by tmaraval         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -111,7 +111,8 @@ SRC = ft_memset.c \
 	ft_printf/ft_printf_width_utils.c \
 	gnl/get_next_line.c \
 	ft_ltoa_base.c \
-	ft_putptr.c
+	ft_putptr.c \
+	ft_print_mem.c
 
 OBJ = $(SRC:%.c=$(OBJ_PATH)/%.o)
 
