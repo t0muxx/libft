@@ -6,7 +6,7 @@
 #    By: tmaraval <tmaraval@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 11:35:52 by tmaraval          #+#    #+#              #
-#    Updated: 2019/10/16 09:10:52 by tmaraval         ###   ########.fr        #
+#    Updated: 2019/10/17 13:39:54 by tmaraval         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -118,9 +118,13 @@ OBJ = $(SRC:%.c=$(OBJ_PATH)/%.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): create_dir $(OBJ)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
+
+create_dir:
+	mkdir -p obj/ft_printf/conv/
+	mkdir -p obj/gnl
 
 $(OBJ): $(OBJ_PATH)/%.o : %.c
 	gcc -o $@ -Wall -Wextra -Werror -c $<
